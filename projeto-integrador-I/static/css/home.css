@@ -9,6 +9,7 @@
     --cor3: #427BA1;
     --cor4: #679437;
     --cor5: #3D5C1B;
+    --cor6: #cecece;
 
     --fonte-destaque: 'Archivo Black', 'Bebas Neue', 'sans-serif';
     --fonte-menu-conteúdo: 'Montserrat', arial, verdana, helvetica, sans-serif;
@@ -79,17 +80,31 @@ nav  a:hover {
     border-radius: 20px;
 }
 
-nav  a#link-login:hover {
+a.link-login {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color:var(--cor6);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.575);
+}
+
+a.link-login:hover {
     color: var(--cor1);
     background-color: var(--cor4);
     border-radius: 20px;
 }
 
+section#sec01 {
+    height: 539px;
+}
+
 article#apresentação {
     color: var(--cor1);
-    margin: 100px auto auto 140px;
-    background-color: black;
-    background-size: auto;
+    margin: 100px auto auto 120px;
+    padding: 10px;
+    max-width: fit-content;
+    height:auto;
 }
 
 article#apresentação > h1 {
@@ -99,6 +114,61 @@ article#apresentação > h1 {
 
 article#apresentação > p {
     font-family: var(--fonte-menu-conteúdo);
-    padding: 10px 0px 0px 0px;
     max-width: 600px;
+    margin: 10px auto 40px auto;
+    background-color: rgba(0, 0, 0, 0.185);
+    padding: 5px;
 }
+
+section#sec02 {
+    color: var(--cor1);
+    margin: auto;
+    padding: 50px;
+    max-width: 1100px;
+    height: 500px;
+    background-color: transparent;
+    text-align: center;
+    background-image: url("../imagens/livros-abaixo-full.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 1100px 500px;
+}
+
+h2 {
+    font-family: var(--fonte-destaque);
+}
+
+section#sec02 > p {
+    padding: 20px;
+}
+
+section#sec02 > a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color:var(--cor6);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.575);
+}
+
+section#sec02 > a:hover {
+    color: var(--cor1);
+    background-color: var(--cor4);
+    border-radius: 20px;
+}
+ footer {
+    color:#cecece96;
+    background-color: var(--cor5);
+    text-align: center;
+    font-family: var(--fonte-padrão);
+    padding: 5px;
+ }
+
+ footer > p > a {
+    text-decoration: none;
+    color: #cecece96;
+ }
+
+ footer > p > a:hover {
+    
+ }
