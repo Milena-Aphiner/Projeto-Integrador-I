@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <link rel="shortcut icon" href="../static/imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/base.css">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo">
-            <img src="../static/imagens/Logo200.png" alt="Logo">
+                <img src="../static/imagens/Logo200.png" alt="Logo">
             </div>
-    
+
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sobrenos.html">Sobre-nós</a></li>
@@ -23,4 +25,29 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section id="login">
+            <div id="imagem">
+            </div>
+            <div id="form_fundo">
+                <h1>Entrar</h1>
+                <p>Seja Bem-vindo(a)!</p>
+                <div id="form_frente">
+                    <form action="/login" method="post">
+                        <label for="nome">Usuário</label> <br>
+                        <input type="text" name="Usuário" id="nome" required placeholder="Digite seu nome" class="login"> <br>
+                        <label for="senha" id="senha">Senha</label><br>
+                        <input type="password" name="senha" id="senha" required placeholder="Digite sua senha" class="login"> <br>
+                        <button type="submit" id="btn_login">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span><span>
+                                ENTRAR
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
