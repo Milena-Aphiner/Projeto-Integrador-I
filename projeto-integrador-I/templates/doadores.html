@@ -15,12 +15,28 @@
             </div>
     
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobrenos.html">Sobre-nós</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
-                <li><a href="login.html" class="link-login">Entre ou Cadastre-se</a></li>
+                <li><a href="{{ url_for ('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for ('sobrenos') }}">Sobre-nós</a></li>
+                <li><a href="{{ url_for ('noticias') }}">Notícias</a></li>
+                <li><a href="{{ url_for ('contatos') }}">Contatos</a></li>
+                <li><a href="{{ url_for ('login') }}" class="link-login">Entre ou Cadastre-se</a></li>
             </ul>
         </nav>
     </header>
+    <main id="main_doadores">
+        <h1>Ajude a Enriquecer Nossa Biblioteca! Doe Livros!</h1>
+        <p id="sub">Você tem livros em casa que já leu e não pretende reler? Que tal compartilhá-los com outras pessoas e contribuir para o crescimento da nossa biblioteca?</p>
+        <h2>Por que doar livros?</h2>
+        <h3>Incentivo à Leitura:</h3>
+        <p>Doar livros estimula o hábito de leitura. Quando você compartilha um exemplar já lido, está proporcionando a oportunidade para que outras pessoas mergulhem em histórias e conhecimento. A leitura é uma ferramenta poderosa de transformação social, e a doação de livros contribui para disseminar essa prática.</p>
+        <h3>Enriquecimento Cultural:</h3>
+        <p>Ao doar livros, você enriquece culturalmente outras pessoas. Livros são portas para diferentes mundos, ideias e perspectivas. A diversidade de títulos doados amplia o acervo da biblioteca, tornando-a mais rica e atrativa para os visitantes.</p>
+        <h3>Redução do Consumo e Sustentabilidade:</h3>
+        <p>Doar livros usados é uma forma de consumo consciente. Em vez de acumular livros em casa, você os compartilha com outras pessoas, prolongando sua vida útil. Essa prática também contribui para a redução do desperdício e para a preservação do meio ambiente.</p>
+        <h3>Ato de Cidadania:</h3>
+        <p>A doação de livros é um gesto de solidariedade e cidadania. Ela fortalece os laços entre os membros da comunidade e promove o bem-estar coletivo. Bibliotecas dependem dessas doações para manter seus acervos atualizados e acessíveis a todos.</p>
+        <h1>Como doar?</h1>
+        <p>Traga seus livros até a biblioteca durante o horário de funcionamento. Nossa equipe ficará feliz em receber suas doações e incluí-las em nosso acervo. Juntos, podemos fazer a diferença!</p>
+    </main>
+    <footer><p>Site criado por <a href="https://github.com/Milena-Aphiner/Projeto-Integrador-I" target="_blank">DRP03-Grupo 24</a> para <a href="https://univesp.br/home_page_full" target="_blank">UNIVESP</a>.</p></footer>
 </body>

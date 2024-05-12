@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -15,11 +15,11 @@
             </div>
     
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="doadores.html">Doadores</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
-                <li><a href="login.html" class="link-login">Entre ou Cadastre-se</a></li>
+                <li><a href="{{ url_for ('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for ('noticias') }}">Notícias</a></li>
+                <li><a href="{{ url_for ('doadores') }}">Doadores</a></li>
+                <li><a href="{{ url_for ('contatos') }}">Contatos</a></li>
+                <li><a href="{{ url_for ('login') }}" class="link-login">Entre ou Cadastre-se</a></li>
             </ul>
         </nav>
     </header>

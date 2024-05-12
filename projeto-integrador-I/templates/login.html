@@ -17,11 +17,11 @@
             </div>
 
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobrenos.html">Sobre-nós</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="doadores.html">Doadores</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="{{ url_for ('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for ('sobrenos') }}">Sobre-nós</a></li>
+                <li><a href="{{ url_for ('noticias') }}">Notícias</a></li>
+                <li><a href="{{ url_for ('doadores') }}">Doadores</a></li>
+                <li><a href="{{ url_for ('contatos') }}">Contatos</a></li>
             </ul>
         </nav>
     </header>
@@ -33,9 +33,9 @@
                 <h1>Entrar</h1>
                 <p>Seja Bem-vindo(a)!</p>
                 <div id="form_frente">
-                    <form action="/login" method="post">
+                      <form action="/login" method="post">
                         <label for="nome">Usuário</label> <br>
-                        <input type="text" name="Usuário" id="nome" required placeholder="Digite seu nome" class="login"> <br>
+                        <input type="text" name="nome" id="nome" required placeholder="Digite seu nome" class="login"> <br>
                         <label for="senha" id="senha">Senha</label><br>
                         <input type="password" name="senha" id="senha" required placeholder="Digite sua senha" class="login"> <br>
                         <button type="submit" id="btn_login">
