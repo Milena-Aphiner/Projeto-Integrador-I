@@ -139,18 +139,58 @@ input.login {
 }
 
 button#btn_login {
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    border-radius: 10px;
+    margin-left: 150px;
+    font-weight: bold;
+}
+
+button#btn_login:hover {
+    background-color: var(--cor5);
+}
+
+button#btn_cadastro {
+    display: inline-flex;
+    padding: 10px;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    border-radius: 10px;
+    margin: auto
+}
+
+button#btn_cadastro a {
+    text-decoration: none;
+    font-family: var(--fonte-menu-conteúdo);
+    color: var(--cor1);
+}
+
+button#btn_cadastro:hover {
+    background-color: var(--cor5);
+}
+
+button#btn_cadastro2 {
+    display: inline-flex;
     padding: 10px;
     background-color: var(--cor4);
     color: var(--cor1);
     border: 1px solid rgba(0, 0, 0, 0.192);
     border-radius: 10px;
     margin: 0px 0px 0px 260px;
-    font-weight: bold;
 }
 
-button#btn_login:hover {
+button#btn_cadastro2 a {
+    text-decoration: none;
+    font-family: var(--fonte-menu-conteúdo);
+    color: var(--cor1);
+}
+
+button#btn_cadastro2:hover {
     background-color: var(--cor5);
-    padding: 15px;
 }
 
 main#main_doadores {

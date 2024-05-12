@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Usuário</title>
+    <link rel="shortcut icon" href="../static/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/base.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../static/imagens/Logo200.png" alt="Logo">
+            </div>
+
+            <ul class="menu">
+                <li><a href="{{ url_for ('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for ('sobrenos') }}">Sobre-nós</a></li>
+                <li><a href="{{ url_for ('noticias') }}">Notícias</a></li>
+                <li><a href="{{ url_for ('doadores') }}">Doadores</a></li>
+                <li><a href="{{ url_for ('contatos') }}">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
