@@ -1,32 +1,27 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, app, render_template, request, redirect, url_for, flash, session
 from flask_login import LoginManager, login_user, login_required, logout_user, UserMixin
 from flask_sqlalchemy import SQLAlchemy
-from models import User
 import sqlite3
 
-app = Flask (__name__)
+
+app = Flask(__name__)
 app.config['SECRET_KEY'] = 'MILENAPHINER'
-app.config['DATABASE'] = 'my_database.db'  
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my_database.db'
-
-
-def get_db_connection():
-    conn = sqlite3.connect(app.config['DATABASE'])
-    conn.row_factory = sqlite3.Row
-    return conn
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/milen/Documents/MeusProjetos/Projeto-Integrador-I/projeto-integrador-I/instance/my_database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+   
+login_manager = LoginManager()
+login_manager.init_app(app)
 
+class User(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    nome = db.Column(db.String(30), nullable=False)
+    senha = db.Column(db.String(64), nullable=False)
 
-def create_user_table():
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, nome TEXT NOT NULL, senha TEXT NOT NULL)')
-    conn.commit()
-    conn.close()
+@login_manager.user_loader
+def get(id):
+    return User.query.get(int(id))
 
-with app.app_context():
-    db.create_all()
 
 @app.route('/')
 def homepage():
@@ -70,7 +65,7 @@ def login():
 @app.route('/usuario')
 @login_required
 def usuario():
-    return f'Bem-vindo!'
+    return render_template('usuario.html')
 
 @app.route('/logout')
 @login_required
@@ -91,5 +86,22 @@ def cadastro():
         return redirect(url_for('login'))
     return render_template('cadastro.html')
 
-if __name__== "__main__":
+
+def get_db_connection():
+    conn = sqlite3.connect(app.config['SQLALCHEMY_DATABASE_URI'])
+    conn.row_factory = sqlite3.Row
+    return conn
+
+def create_user_table():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, nome TEXT NOT NULL, senha TEXT NOT NULL)')
+    conn.commit()
+    conn.close()
+
+
+
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
