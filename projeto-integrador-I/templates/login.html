@@ -47,8 +47,28 @@
                                 ENTRAR
                         </button>
                     </form>
+                    <div class="alert alert-danger error-message" role="alert">
+                        {{ get_flashed_messages(category_filter=["danger"]) }}
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <script>
+        // JavaScript para ocultar a mensagem de erro inicialmente
+        document.querySelector('.error-message').style.display = 'none';
+    
+        // Verifique se a mensagem de erro deve ser exibida após o envio do formulário
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            const nome = document.querySelector('[name="nome"]').value;
+            const senha = document.querySelector('[name="senha"]').value;
+            // Aqui, você deve verificar as credenciais no servidor (usando AJAX ou outra abordagem)
+            // Se as credenciais forem inválidas, exiba a mensagem de erro:
+            if (!nome || !senha) {
+                document.querySelector('.error-message').style.display = 'block';
+                event.preventDefault(); // Impede o envio do formulário
+            }
+        });
+    </script>
 </body>

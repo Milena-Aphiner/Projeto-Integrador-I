@@ -193,12 +193,12 @@ button#btn_cadastro2:hover {
     background-color: var(--cor5);
 }
 
-main#main_doadores {
+main {
     background-color: var(--cor0);
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
     text-align: justify;
@@ -216,7 +216,16 @@ main#main_doadores > p#sub {
     text-align: center;
     padding: 20px;
 }
+div#img{
+    margin: auto;
+    background-image: url('../imagens/doação-de-livros.jpg');
+}
 
+div > img {
+    background-color: #02668C;
+    max-width: 600px;
+    max-height: fit-content;
+}
 main#main_doadores > h2 {
     padding: 20px 0px 20px 0px;
     color: var(--cor2);
@@ -246,3 +255,40 @@ footer {
  footer > p > a:hover {
     color: var(--cor1);
  }
+
+ /* estilo.css */
+.alert {
+    display: none; /* Oculta a mensagem inicialmente */
+    /* Outros estilos para a mensagem de erro (cor, margem, etc.) */
+}
+
+body#usuario {
+    background-image: url('../imagens/livros-abertos.jpg');
+}
+
+main > h1 {
+    text-align: center;
+    padding: 10px;
+    /*background-image: linear-gradient(to right, var(--cor3), transparent, var(--cor3));*/
+    color: var(--cor4);
+    font-family: var(--fonte-destaque);
+}
+
+main > h2 {
+    padding: 20px 0px 20px 0px;
+    color: var(--cor2);
+}
+
+main > h3 {
+    padding: 30px 0px 30px 0px;
+    color: var(--cor3);
+}
+
+main > p {
+    padding: 20px 0px 20px 0px;
+}
+
+main > ul > li {
+    padding: 10px;
+    list-style-position: inside;
+}
