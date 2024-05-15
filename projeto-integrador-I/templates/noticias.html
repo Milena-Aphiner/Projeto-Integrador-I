@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <link rel="shortcut icon" href="../static/imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/base.css">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo">
-            <img src="../static/imagens/Logo200.png" alt="Logo">
+                <img src="../static/imagens/Logo200.png" alt="Logo">
             </div>
-    
+
             <ul class="menu">
                 <li><a href="{{ url_for ('homepage') }}">Home</a></li>
                 <li><a href="{{ url_for ('sobrenos') }}">Sobre-nós</a></li>
@@ -23,6 +25,44 @@
             </ul>
         </nav>
     </header>
-    <main class="normal"></main>
-    <footer><p>Site criado por <a href="https://github.com/Milena-Aphiner/Projeto-Integrador-I" target="_blank">DRP03-Grupo 24</a> para <a href="https://univesp.br/home_page_full" target="_blank">UNIVESP</a>.</p></footer>
+    <main class="normal">
+        <h1>Notícias</h1>
+        <article class="noticias">
+            <h2> Dando um passo além na Semana da Matemática na Escola Estadual Figueira de Toledo!</h2>
+            <p>Hoje foi dia de trazer toda a emoção da Matemática para a quadra da nossa escola! Na nossa trilha
+                matemática, os corredores não só suaram, mas também exercitaram suas mentes enquanto competiam sala
+                contra sala! <br>
+                Foi incrível ver nossos alunos mergulhando de cabeça nas atividades, resolvendo problemas e trabalhando
+                em equipe para conquistar a vitória! Desde desafios de cálculos rápidos até quebra-cabeças matemáticos,
+                cada passo dado foi uma aventura rumo ao aprendizado e à diversão.
+                Um grande agradecimento a todos os participantes por tornarem este evento tão especial e vibrante! E
+                claro, especialmente aos nossos professores e equipe, cujo compromisso e criatividade tornaram esta
+                experiência possível. <br>
+                Que esta semana continue inspirando todos nós a explorar a Matemática de novas maneiras e a descobrir a
+                beleza dos números em tudo o que fazemos!</p>
+        </article>
+        <article class="noticias"><h2>Oportunidade única para terminar os estudos!</h2>
+            <img src="../static/imagens/enceja.jpg" alt="enceja" id="enceja"></article>
+        <article class="noticias">
+            <h2>Semana do Livro Infantil Monteiro Lobato 16.04.2024 a 19.04.2024 </h2>
+            <p>
+                Agradecimento Especial a José Valdecir dos Santos. <br>
+                Queremos expressar nossa gratidão pela palestra e apresentação dos seus livros. Foi uma verdadeira
+                imersão na rica história de Natividade da Serra, graças a obras como "Resgatando a História de
+                Natividade da Serra", "Dicionário di Caipirêis", "Cartilha Lírica" e "Contos Assombrosos da Tia
+                Nastácia". Além disso, as aventuras de Pedro Malasarte nos encantaram e nos fizeram mergulhar em um
+                universo de magia e travessuras! <br>
+                José Valdecir dos Santos, sua paixão pela cultura local e sua habilidade em compartilhar suas histórias
+                são verdadeiramente inspiradoras. Obrigado por nos proporcionar uma jornada tão especial através das
+                páginas dos seus livros. Vocês nos ensinou não apenas sobre o passado, mas também sobre a importância de
+                preservar nossas raízes e tradições para as gerações futuras. <br>
+                Foi uma honra ter você conosco e mal podemos esperar para nos perdermos nas páginas dos seus livros
+                novamente em breve!
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p>Site criado por <a href="https://github.com/Milena-Aphiner/Projeto-Integrador-I" target="_blank">DRP03-Grupo
+                24</a> para <a href="https://univesp.br/home_page_full" target="_blank">UNIVESP</a>.</p>
+    </footer>
 </body>
