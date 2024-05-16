@@ -11,14 +11,14 @@
 <header>
     <nav>
         <div class="logo">
-        <img src="../static/imagens/Logo200.png" alt="Logo">
+        <a href="{{url_for ('jhonatan.html')}}"><img src="../static/imagens/Logo200.png" alt="Logo" target="_blank"></a>
         </div>
 
         <ul class="menu">
-            <li><a href="{{ url_for ('sobrenos') }}">Sobre-nós</a></li>
-            <li><a href="{{ url_for ('noticias') }}">Notícias</a></li>
-            <li><a href="{{ url_for ('doadores') }}">Doadores</a></li>
-            <li><a href="{{ url_for ('contatos') }}">Contatos</a></li>
+            <li><a href="{{ url_for ('sobrenos') }}" class="menu">Sobre-nós</a></li>
+            <li><a href="{{ url_for ('noticias') }}" class="menu">Notícias</a></li>
+            <li><a href="{{ url_for ('doadores') }}" class="menu">Doadores</a></li>
+            <li><a href="{{ url_for ('contatos') }}" class="menu">Contatos</a></li>
             <li><a href="{{ url_for ('login') }}"class="link-login">Entre ou Cadastre-se</a></li>
         </ul>
     </nav>

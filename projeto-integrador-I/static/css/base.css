@@ -404,3 +404,40 @@ footer.fixed-footers {
  #enceja {
     padding: 25px;
  }
+
+ body.jhonatan {
+    margin: auto;
+    /*background-image: url('../imagens/jhonatan.jpg');*/
+    background-color: black;
+ }
+
+ main.jhonatan {
+    background-color: var(--cor1);
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
+    text-align: justify;
+ }
+
+ main.jhonatan h1 {
+    color: black;
+ }
+
+ main.jhonatan h3 {
+    color: black;
+ }
+
+ div.jhonatan {
+    text-align: center;
+ }
+
+ p.jhonatan {
+    text-align: center;
+ }
+
+ p#citação {
+    padding: 0px;
+    text-align: right;
+ }
